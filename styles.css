@@ -1,0 +1,124 @@
+body {
+    background-color: #809DFF;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+
+}
+
+h1 {
+    font-size: 10pt;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.header-home {
+    background-color: #7236ff65;
+}
+
+.header-login {
+    background-color: #86b3509a;
+}
+
+.header-register {
+    background-color: #ffaf99cc;
+}
+
+.back-arrow {
+    background-color: black;
+    width: 80px;
+    height: 50px;
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    position: absolute;
+    top: 37px;
+    left: 20px ;
+}
+
+.back-arrow:hover {
+    animation: back-arrow-animation ease-in-out 0.5s infinite;
+    -webkit-animation: back-arrow-animation ease-in-out 0.5s infinite forwards;
+}
+
+@keyframes back-arrow-animation {
+    0% {
+        left: 20px;
+    }
+
+    50% {
+        left: 30px;
+    }
+
+    100% {
+        left: 20px;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+form {
+    margin: auto;
+    width: 420px;
+    height: auto;
+
+} 
+
+input {
+    height: 45px;
+    width: 417px;
+    border: 1px rgb(85, 138, 235) solid;
+    background-color: #ffffffbd;
+    margin-top: 2px !important;
+}
+
+input:focus {
+    outline: none;
+}
+
+.submit {
+    width: 421px !important;
+    background-color: rgb(175, 166, 150);
+    border: 1px rgb(114, 100, 96) solid;
+}
+
+
+.big-button {
+    border: 2px solid white;
+    width: 800px;
+    margin: 20px;
+    text-align: center;
+    background-color: #8ea8ff;
+    transition: background-color 0.3s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+}
+
+.big-button:hover {
+    background-color: #a1b7ff;
+    transition: background-color 0.3s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+}
+
+
+.big-button:active, .submit:active {
+    transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
