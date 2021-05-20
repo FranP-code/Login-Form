@@ -32,6 +32,7 @@ header {
     width: 80px;
     height: 50px;
     clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    /*  CREDITS FOR THE CLIP-PATH: https://bennettfeely.com/clippy/ ARROW FIGURE*/
     position: absolute;
     top: 37px;
     left: 20px ;
