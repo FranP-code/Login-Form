@@ -1,5 +1,5 @@
 body {
-    background-color: #809DFF;
+    background-color: #ffd780;
     font-family: Arial, Helvetica, sans-serif;
     user-select: none;
 
@@ -16,7 +16,7 @@ header {
 }
 
 .header-home {
-    background-color: #7236ff65;
+    background-color: #368dff52;
 }
 
 .header-login {
@@ -39,7 +39,7 @@ header {
 }
 
 .back-arrow:hover {
-    animation: back-arrow-animation ease-in-out 0.5s infinite;
+    animation: back-arrow-animation ease-in-out 0.5s infinite forwards;
     -webkit-animation: back-arrow-animation ease-in-out 0.5s infinite forwards;
 }
 
@@ -107,7 +107,7 @@ input:focus {
     width: 800px;
     margin: 20px;
     text-align: center;
-    background-color: #8ea8ff;
+    background-color: #ffd780;
     transition: background-color 0.3s ease-in-out;
     -webkit-transition: background-color 0.3s ease-in-out;
     -moz-transition: background-color 0.3s ease-in-out;
@@ -116,7 +116,7 @@ input:focus {
 }
 
 .big-button:hover {
-    background-color: #a1b7ff;
+    background-color: #ffe2a3;
     transition: background-color 0.3s ease-in-out;
     -webkit-transition: background-color 0.3s ease-in-out;
     -moz-transition: background-color 0.3s ease-in-out;
@@ -131,6 +131,11 @@ input:focus {
     -moz-transform: translateY(2px);
     -ms-transform: translateY(2px);
     -o-transform: translateY(2px);
+}
+
+h2 {
+    font-weight: lighter;
+    
 }
 
 .flex-container {

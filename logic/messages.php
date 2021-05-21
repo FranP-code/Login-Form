@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(0);
+
+
 function error($string) {
     return '<h2 class=`invalid`>'. $string . '</h2>';
 }
