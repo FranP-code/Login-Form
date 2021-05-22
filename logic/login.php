@@ -6,6 +6,7 @@ require './sql/querys.php';
 
 $user = $_POST['user'];
 $password = $_POST['password'];
+$passwordE = hash('sha256', $password);
 
 if (isset($_POST['submit'])) {
 
@@ -15,12 +16,14 @@ if (isset($_POST['submit'])) {
 
             if(strlen($password) <= 20){
 
-                $c = verifyDB($user, $password);
+                $c = verifyDB($user, $passwordE);
 
-                if ($c[0][1] === $user && $c[0][2] === $password) {
+                if ($c[0][1] === $user && $c[0][2] === $passwordE) {
+                    setcookie('session', 'true', time() + 3600, '/');
+
                     echo '<script>
                     
-                    window.location.replace(`../success-pages/loginS.html`)
+                    window.location.replace(`../success-pages/loginS.php`)
                     
                     </script>';
 

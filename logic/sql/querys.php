@@ -9,6 +9,15 @@ function addToDB($user, $password) {
     $add -> execute();
 }
 
+function verifyUser($user) {
+    require './sql/connection.php';
+
+    $verify = $connect -> prepare('select user from users where user = ?');
+    $verify -> bindParam(1, $user, PDO::PARAM_STR);
+    $verify -> execute();
+    return $verify -> fetch();
+}
+
 function verifyDB($user, $password) {
     require './sql/connection.php';
 
