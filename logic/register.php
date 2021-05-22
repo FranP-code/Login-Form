@@ -6,7 +6,9 @@ require './sql/querys.php';
 
 $user = $_POST['user'];
 $password = $_POST['password'];
+$passwordE = hash('sha256', $password);
 $confirm_password = $_POST['confirm-password'];
+$confirm_passwordE = hash('sha256', $confirm_password);
 
 if (isset($_POST['submit'])) {
 
@@ -17,12 +19,20 @@ if (isset($_POST['submit'])) {
             if (strlen($user) <= 20) {
 
                 if (strlen($password) <= 20) {
-                    
-                    addToDB(sanitize('user', $user), $password);
 
-                    echo '<script>
-                        window.location.replace(`../success-pages/registerS.html`)
-                    </script>';
+                    if (!verifyUser($user)) {
+                    
+                        addToDB(sanitize('user', $user), $passwordE);
+
+                        echo '<script>
+                            window.location.replace(`../success-pages/registerS.html`)
+                        </script>';
+
+                    } else {
+                        echo error('The username already exists');
+                        echo backToPreviusPage(3, '../register.html');
+                    }
+
 
                 } else {
                     echo error('The password has more characters than allowed!');

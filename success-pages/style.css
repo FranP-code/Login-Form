@@ -1,3 +1,7 @@
+* {
+    user-select: none;
+}
+
 html {
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
@@ -66,4 +70,11 @@ a:hover {
     -moz-transition: ease-in-out 0.4s;
     -ms-transition: ease-in-out 0.4s;
     -o-transition: ease-in-out 0.4s;
+}
+
+p {
+    border: white solid 2px;
+    margin: 80px;
+    color: white;
+    padding: 30px;
 }
